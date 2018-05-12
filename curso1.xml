@@ -2,10 +2,10 @@
 <!DOCTYPE curso SYSTEM "curso.dtd"[
     <!ENTITY  laboratorio "Laboratorio Guallatire">
 ]>
-<curso año="2018" sala="&laboratorio;">
+<curso nombre="Tecnología Web" año="2018" sala="&laboratorio;" codigo="CC001">
     <profesor grado="Licenciado en computacion" rut="1111111-1" nombre="Kevin" apellido="Marca">
     </profesor>
-    <carrera locacion="Campus Saucache" codigo="CC001">
+    <carrera nombre="Ingeniería en Computación e Informática" locacion="Campus Saucache">
     </carrera>
     <alumnos>
         <alumno rut="2222222-2" permanencia="7 semestres" nombre="Ivan" apellido="Cardemil">

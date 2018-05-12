@@ -6,7 +6,9 @@
 <!ELEMENT alumno (#PCDATA)>
 <!ATTLIST curso
           año CDATA #REQUIRED
-          sala CDATA #REQUIRED>
+          sala CDATA #REQUIRED
+          nombre CDATA #REQUIRED
+          codigo CDATA #REQUIRED>
 <!ATTLIST profesor
           grado CDATA #REQUIRED
           nombre CDATA #REQUIRED
@@ -14,7 +16,7 @@
           rut   CDATA #REQUIRED>
 <!ATTLIST carrera
           locacion CDATA #REQUIRED
-          codigo CDATA #REQUIRED>
+          nombre CDATA #REQUIRED>
 <!ATTLIST alumno
           rut CDATA #REQUIRED
           nombre CDATA #REQUIRED

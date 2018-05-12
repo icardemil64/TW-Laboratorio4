@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet type="text/xsl" href="cursoWeb.xsl"?> -->
 <curso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="curso.xsd"
-       año="2018">
+       año="2018"
+       sala="Laboratorio Azufre"
+       codigo="CC003"
+       nombre="Comunicación oral y escrita">
     <profesor grado="Licenciado en literatura" rut="9999999-9" nombre="Antonio" apellido="Skarmeta"/>
-    <carrera sede="Laboratorio Pomerape" codigo="CC003"/>
+    <carrera nombre="Pedagogía en lenguaje" locacion="Campus Valásquez"/>
     <alumnos>
         <alumno rut="1101010-1" permanencia="2 semestres" nombre="Oscar" apellido="Hahn"/>
         <alumno rut="2101010-1" permanencia="1 semestres" nombre="Manuel" apellido="Silva"/>

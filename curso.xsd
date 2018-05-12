@@ -11,7 +11,9 @@
                 <xsd:element ref="alumnos"/>
             </xsd:sequence>
             <xsd:attribute name="año" type="xsd:gYear" use="required"/>
-            <xsd:attribute name="sala" type="laboratoriosDisponibles" use="required"/>                    
+            <xsd:attribute name="sala" type="laboratoriosDisponibles" use="required"/>
+            <xsd:attribute name="codigo" type="validadorCodigo" use="required"/>
+            <xsd:attribute name="nombre" type="xsd:string" use="required"/>                         
         </xsd:complexType>
     </xsd:element>
     <xsd:element name="profesor">
@@ -25,7 +27,7 @@
     <xsd:element name="carrera">
         <xsd:complexType>
             <xsd:attribute name="locacion" type="xsd:string" use="required"/>
-            <xsd:attribute name="codigo" type="validadorCodigo" use="required"/>            
+            <xsd:attribute name="nombre" type="xsd:string" use="required"/>             
         </xsd:complexType>        
     </xsd:element>
     <xsd:element name="alumnos">
