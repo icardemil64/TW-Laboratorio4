@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<xsd:schema version="1.0"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    <xsd:element name="curso">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="profesor"/>
+                <xsd:element ref="carrera"/>
+                <xsd:element ref="alumnos"/>
+            </xsd:sequence>
+            <xsd:attribute name="año" type="xsd:gYear" use="required"/>
+            <xsd:attribute name="sala" type="laboratoriosDisponibles" use="required"/>                    
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="profesor">
+        <xsd:complexType>
+            <xsd:attribute name="grado" type="xsd:string" use="required"/>
+            <xsd:attribute name="rut" type="xsd:string" use="required"/>
+            <xsd:attribute name="nombre" type="xsd:string" use="required"/>
+            <xsd:attribute name="apellido" type="xsd:string" use="required"/>            
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="carrera">
+        <xsd:complexType>
+            <xsd:attribute name="locacion" type="xsd:string" use="required"/>
+            <xsd:attribute name="codigo" type="validadorCodigo" use="required"/>            
+        </xsd:complexType>        
+    </xsd:element>
+    <xsd:element name="alumnos">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="alumno"/>
+                <xsd:element ref="alumno"/>
+                <xsd:element ref="alumno"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="alumno">
+        <xsd:complexType>
+            <xsd:attribute name="rut" type="xsd:string" use="required"/>
+            <xsd:attribute name="permanencia" type="xsd:string" use="required"/>            
+            <xsd:attribute name="nombre" type="xsd:string" use="required"/>
+            <xsd:attribute name="apellido" type="xsd:string" use="required"/>
+            <xsd:attribute name="edad" type="limiteEdad" use="optional"/>            
+        </xsd:complexType>        
+    </xsd:element>
+    <xsd:simpleType name="laboratoriosDisponibles">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value = "Laboratorio Parinacota"/>
+            <xsd:enumeration value = "Laboratorio Guallatire"/>
+            <xsd:enumeration value = "Laboratorio Socompa"/>
+            <xsd:enumeration value = "Laboratorio Licancabur"/>
+            <xsd:enumeration value = "Laboratorio Azufre"/>
+            <xsd:enumeration value = "Laboratorio Pomerape"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="limiteEdad">
+        <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="15"/>
+            <xsd:maxInclusive value="120"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="validadorCodigo">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[C]{2}([0-9]{3})"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

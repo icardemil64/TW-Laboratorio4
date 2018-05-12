@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE curso SYSTEM "curso.dtd"[
+    <!ENTITY  laboratorio "Laboratorio Guallatire">
+]>
+<curso año="2018" sala="&laboratorio;">
+    <profesor grado="Licenciado en computacion" rut="1111111-1" nombre="Kevin" apellido="Marca">
+    </profesor>
+    <carrera locacion="Campus Saucache" codigo="CC001">
+    </carrera>
+    <alumnos>
+        <alumno rut="2222222-2" permanencia="7 semestres" nombre="Ivan" apellido="Cardemil">
+        </alumno>
+        <alumno rut="3333333-3" permanencia="9 semestres" nombre="Camilo" apellido="Rojas">
+        </alumno>
+        <alumno rut="4444444-4" permanencia="5 semestres" nombre="Jimmy" apellido="Neutron" edad="16">
+        </alumno>
+    </alumnos>
+</curso>

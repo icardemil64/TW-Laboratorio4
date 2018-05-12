@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT curso (profesor,carrera,alumnos,ayudante?)>
+<!ELEMENT profesor (#PCDATA)>
+<!ELEMENT carrera (#PCDATA)>
+<!ELEMENT alumnos (alumno+)>
+<!ELEMENT alumno (#PCDATA)>
+<!ATTLIST curso
+          año CDATA #REQUIRED
+          sala CDATA #REQUIRED>
+<!ATTLIST profesor
+          grado CDATA #REQUIRED
+          nombre CDATA #REQUIRED
+          apellido CDATA #REQUIRED
+          rut   CDATA #REQUIRED>
+<!ATTLIST carrera
+          locacion CDATA #REQUIRED
+          codigo CDATA #REQUIRED>
+<!ATTLIST alumno
+          rut CDATA #REQUIRED
+          nombre CDATA #REQUIRED
+          apellido CDATA #REQUIRED
+          permanencia CDATA #REQUIRED
+          edad CDATA #IMPLIED>
+

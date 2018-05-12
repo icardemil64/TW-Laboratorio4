@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="curso.xsd"
+       año="2018">
+    <profesor grado="Licenciado en literatura" rut="9999999-9" nombre="Antonio" apellido="Skarmeta"/>
+    <carrera sede="Laboratorio Pomerape" codigo="CC003"/>
+    <alumnos>
+        <alumno rut="1101010-1" permanencia="2 semestres" nombre="Oscar" apellido="Hahn"/>
+        <alumno rut="2101010-1" permanencia="1 semestres" nombre="Manuel" apellido="Silva"/>
+        <alumno rut="3101010-1" permanencia="4 semestres" nombre="Raul" apellido="Zurita"/>
+    </alumnos>
+</curso>

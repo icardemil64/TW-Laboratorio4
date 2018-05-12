@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="curso.xsd"
+       año="2018"
+       sala="Laboratorio Pomerape">
+    <profesor grado="Licenciado en Ciencias" rut="5555555-5" nombre="Jose" apellido="Maza"/>
+    <carrera locacion="Campus Saucache" codigo="CC102"/>
+    <alumnos>
+        <alumno rut="6666666-6" permanencia="4 semestres" nombre="Mario" apellido="Acuña"/>
+        <alumno rut="7777777-7" permanencia="6 semestres" nombre="Pepe" apellido="Nuñez" edad="110"/>
+        <alumno rut="8888888-8" permanencia="3 semestres" nombre="Hernan" apellido="Cardemil"/>
+    </alumnos>
+</curso>
