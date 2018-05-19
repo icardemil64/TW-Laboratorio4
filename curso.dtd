@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Actividad 2, punto a): Se declaran los elementos de los archivos XML-->
+<!--Actividad 2, punto c): Usar cardinalidad ? -->
 <!ELEMENT curso (profesor,carrera,alumnos,ayudante?)>
 <!ELEMENT profesor (#PCDATA)>
 <!ELEMENT carrera (#PCDATA)>
+<!--Actividad 2, punto c): Usar cardinalidad + -->
 <!ELEMENT alumnos (alumno+)>
 <!ELEMENT alumno (#PCDATA)>
+<!--Actividad 2, punto b) El atributo año puede tener solo dos valores posibles-->
+<!--Actividad 2, punto d) Todos los atributos usan #REQUIRED a excepción de edad en el elemento alumno-->
 <!ATTLIST curso
-          año CDATA #REQUIRED
+          año (2017|2018) #REQUIRED
           sala CDATA #REQUIRED
           nombre CDATA #REQUIRED
           codigo CDATA #REQUIRED>
@@ -17,6 +22,7 @@
 <!ATTLIST carrera
           locacion CDATA #REQUIRED
           nombre CDATA #REQUIRED>
+<!--Actividad 2, punto d) Se declaran edad como #IMPLIED-->
 <!ATTLIST alumno
           rut CDATA #REQUIRED
           nombre CDATA #REQUIRED

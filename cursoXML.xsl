@@ -4,7 +4,9 @@
     <xsl:strip-space elements="*"/>
     <xsl:template match="/">
         <curso año="{curso/@año}" sala="{curso/@sala}" nombre="{curso/@nombre}" codigo="{curso/@codigo}">
+            <!--- Actividad 4, punto a): Se cambia la estructura del XML original, ahora carrera por sobre profesor -->
             <carrera>
+            <!--- Actividad 4, punto a): Todos los atributos de el elemento carrera (nombre, locación) se transformaron en elementos -->
                 <nombre>
                     <xsl:value-of select="curso/carrera/@nombre"/>
                 </nombre>
@@ -13,6 +15,7 @@
                 </locacion>
             </carrera>
             <profesor>
+            <!--- Actividad 4, punto a): Todos los atributos de el elemento profesor (grado, rut, nombre, apellido) se transformaron en elementos -->
                 <grado>
                     <xsl:value-of select="curso/profesor/@grado"/>
                 </grado>

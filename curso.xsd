@@ -2,7 +2,9 @@
 <xsd:schema version="1.0"
            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified">
-    
+    <!-- Actividad 3, punto a): Se define el elemento curso-->
+    <!-- Actividad 3, punto b): en la definición de los atributos se utilizan los tipos primitivos -->
+    <!-- Actividad 3, punto c): todos los atributos se definen como REQUIRED a excepción de edad en elemento alumno -->
     <xsd:element name="curso">
         <xsd:complexType>
             <xsd:sequence>
@@ -16,6 +18,7 @@
             <xsd:attribute name="nombre" type="xsd:string" use="required"/>                         
         </xsd:complexType>
     </xsd:element>
+    <!-- Actividad 3, punto a): Se define el elemento profesor-->
     <xsd:element name="profesor">
         <xsd:complexType>
             <xsd:attribute name="grado" type="xsd:string" use="required"/>
@@ -24,21 +27,23 @@
             <xsd:attribute name="apellido" type="xsd:string" use="required"/>            
         </xsd:complexType>
     </xsd:element>
+    <!-- Actividad 3, punto a): Se define el elemento carrera-->
     <xsd:element name="carrera">
         <xsd:complexType>
             <xsd:attribute name="locacion" type="xsd:string" use="required"/>
             <xsd:attribute name="nombre" type="xsd:string" use="required"/>             
         </xsd:complexType>        
     </xsd:element>
+    <!-- Actividad 3, punto a): Se define el elemento alumnos-->
     <xsd:element name="alumnos">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="alumno"/>
-                <xsd:element ref="alumno"/>
-                <xsd:element ref="alumno"/>
+                <xsd:element ref="alumno" minOccurs="1" maxOccurs="5"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+    <!-- Actividad 3, punto a): Se define el elemento alumno-->
+    <!-- Actividad 3, punto c): Se define el atributo edad como OPTIONAL-->
     <xsd:element name="alumno">
         <xsd:complexType>
             <xsd:attribute name="rut" type="xsd:string" use="required"/>
@@ -48,6 +53,8 @@
             <xsd:attribute name="edad" type="limiteEdad" use="optional"/>            
         </xsd:complexType>        
     </xsd:element>
+    
+    <!-- Actividad 3, punto d): Se define los tipos simples, donde se realizan las restricciones con los tipos base de Schema-->
     <xsd:simpleType name="laboratoriosDisponibles">
         <xsd:restriction base="xsd:string">
             <xsd:enumeration value = "Laboratorio Parinacota"/>
@@ -64,6 +71,7 @@
             <xsd:maxInclusive value="120"/>
         </xsd:restriction>
     </xsd:simpleType>
+    <!--- Actividad 3, punto e): Se utiliza la expresión regular para validar el código del documento -->
     <xsd:simpleType name="validadorCodigo">
         <xsd:restriction base="xsd:string">
             <xsd:pattern value="[C]{2}([0-9]{3})"/>

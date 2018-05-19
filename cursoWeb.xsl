@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="html"/>
     <xsl:template match="/">
+        <!--- Actividad 4, punto b.1): Información del curso -->
         <html>
             <head>
                 <title>Información del curso
@@ -17,7 +18,7 @@
                     </tr>
                     <tr>
                         <th colspan="2">
-                            Carrera: <xsl:value-of select="curso/alumnos/>
+                            Carrera: <xsl:value-of select="curso/alumnos"/>
                         </th>
                         <th colspan="2">
                             Locación: <xsl:value-of select="curso/carrera/@locacion"/>
@@ -56,6 +57,7 @@
                             <xsl:value-of select="curso/profesor/@grado"/>
                         </th>
                     </tr>
+                    <!--- Actividad 4, punto b.2): Lista de alumnos -->
                     <tr>
                         <th colspan="4">
                             Lista de alummos

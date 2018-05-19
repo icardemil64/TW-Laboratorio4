@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Actividad 2: En las líneas se enlaza con el validador DTD-->
 <!DOCTYPE curso SYSTEM "curso.dtd"[
+<!--Actividad 2, punto e): Se crea la entidad laboratorio-->
     <!ENTITY  laboratorio "Laboratorio Guallatire">
 ]>
+<!--Todos los elementos tienen al menos dos atributos-->
 <curso nombre="Tecnología Web" año="2018" sala="&laboratorio;" codigo="CC001">
     <profesor grado="Licenciado en computacion" rut="1111111-1" nombre="Kevin" apellido="Marca">
     </profesor>
